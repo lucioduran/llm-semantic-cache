@@ -89,12 +89,18 @@ class Cache:
             return self.db.execute("SELECT n FROM epoch WHERE id=1").fetchone()[0]
 
     def put(
-        self, scope: Scope, query: str, answer: str, vector: Iterable[float],
-        *, ttl: float, ticket: int,
+        self,
+        scope: Scope,
+        query: str,
+        answer: str,
+        vector: Iterable[float] | None,
+        *,
+        ttl: float,
+        ticket: int,
     ) -> bool:
         key = scope.key()
         self._query(query)
-        encoded = json.dumps(self._vector(vector))
+        encoded = None if vector is None else json.dumps(self._vector(vector))
         if not isinstance(answer, str) or not answer.strip():
             raise ValueError("Answer must be a nonempty string")
         if not math.isfinite(ttl) or ttl <= 0:
@@ -107,8 +113,17 @@ class Cache:
                     return False
                 self.db.execute(
                     "INSERT OR REPLACE INTO entries VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    (key, scope.user, scope.version, self.model, self.dimensions,
-                     query, answer, encoded, self.clock() + ttl),
+                    (
+                        key,
+                        scope.user,
+                        scope.version,
+                        self.model,
+                        self.dimensions,
+                        query,
+                        answer,
+                        encoded,
+                        self.clock() + ttl,
+                    ),
                 )
                 self.db.execute("COMMIT")
                 return True
@@ -117,7 +132,10 @@ class Cache:
                 raise
 
     def lookup(
-        self, scope: Scope, query: str, vector: Iterable[float] | None = None,
+        self,
+        scope: Scope,
+        query: str,
+        vector: Iterable[float] | None = None,
     ) -> Hit | None:
         key = scope.key()
         self._query(query)
@@ -135,6 +153,8 @@ class Cache:
             return None
         best = None
         for saved_query, answer, encoded in rows:
+            if encoded is None:
+                continue
             score = sum(a * b for a, b in zip(normalized, json.loads(encoded), strict=True))
             if score >= self.threshold and (best is None or score > best.score):
                 best = Hit(answer, "semantic", score, saved_query)
