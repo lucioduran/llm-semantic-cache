@@ -9,6 +9,7 @@ import platform
 import subprocess
 import time
 from dataclasses import asdict
+from functools import partial
 from pathlib import Path
 
 from semantic_cache import Cache, Scope
@@ -88,23 +89,23 @@ def main():
         source = {}
         for request in requests:
             start = time.perf_counter()
-            if request["event"]:
+            if request["event"] and policy != "none":
                 cache.invalidate(**request["event"])
             scope = scope_of(request, policy)
-            ticket = cache.ticket()
+            ticket = cache.ticket() if policy != "none" else 0
             query = request["query"]
-            hit, lookup_seconds = timed(lambda: cache.lookup(scope, query))
-            if policy == "none":
-                hit = None
+            hit, lookup_seconds = (None, 0.0)
+            if policy != "none":
+                hit, lookup_seconds = timed(partial(cache.lookup, scope, query))
             vector, embedding_seconds, generation_seconds = None, 0.0, 0.0
             if hit is None and policy in ("semantic", "unsafe_diagnostic"):
-                vectors, embedding_seconds = timed(lambda: models.embed([query]))
+                vectors, embedding_seconds = timed(partial(models.embed, [query]))
                 vector = vectors[0]
-                hit, duration = timed(lambda: cache.lookup(scope, query, vector))
+                hit, duration = timed(partial(cache.lookup, scope, query, vector))
                 lookup_seconds += duration
             prompt = config["prompt"].format(context=request["context"], question=query)
             if hit is None:
-                generated, generation_seconds = timed(lambda: models.generate(prompt))
+                generated, generation_seconds = timed(partial(models.generate, prompt))
                 answer = generated["answer"]
                 if policy != "none":
                     cache.put(scope, query, answer, vector, ttl=3600, ticket=ticket)
