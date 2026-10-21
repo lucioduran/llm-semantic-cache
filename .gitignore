@@ -1,0 +1,7 @@
+.venv/
+.cache/
+__pycache__/
+.coverage
+.ruff_cache/
+build/
+*.db
