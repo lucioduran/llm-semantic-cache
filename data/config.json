@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "embedding_model": {
+    "id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+  },
+  "answer_model": {
+    "id": "google/flan-t5-small",
+    "revision": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab"
+  },
+  "max_input_tokens": 384,
+  "max_new_tokens": 32,
+  "embedding_max_tokens": 256,
+  "threads": 4,
+  "seed": 1729,
+  "prompt": "Answer the question using only the context. Give a short answer. If the context does not contain the answer, say unknown.\n\nContext:\n{context}\n\nQuestion: {question}\nAnswer:",
+  "threshold": 0.9
+}

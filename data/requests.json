@@ -1,0 +1,838 @@
+[
+  {
+    "id": "q01",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "40",
+    "context": "Atlas has a storage quota of 40 GB. Its backup quota is 7 GB.",
+    "event": null
+  },
+  {
+    "id": "q02",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "40",
+    "context": "Atlas has a storage quota of 40 GB. Its backup quota is 7 GB.",
+    "event": null
+  },
+  {
+    "id": "q03",
+    "query": "What storage quota does Atlas have?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "40",
+    "context": "Atlas has a storage quota of 40 GB. Its backup quota is 7 GB.",
+    "event": null
+  },
+  {
+    "id": "q04",
+    "query": "What is the backup quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "backup",
+    "expected": "7",
+    "context": "Atlas has a storage quota of 40 GB. Its backup quota is 7 GB.",
+    "event": null
+  },
+  {
+    "id": "q05",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-02-01"
+    },
+    "intent": "storage",
+    "expected": "90",
+    "context": "Atlas has a storage quota of 90 GB.",
+    "event": null
+  },
+  {
+    "id": "q06",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read",
+        "admin"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "120",
+    "context": "Atlas has an administrator storage quota of 120 GB.",
+    "event": null
+  },
+  {
+    "id": "q07",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "bob",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "25",
+    "context": "Atlas has a storage quota of 25 GB for Bob.",
+    "event": null
+  },
+  {
+    "id": "q08",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v2",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "95",
+    "context": "Atlas has a storage quota of 95 GB.",
+    "event": null
+  },
+  {
+    "id": "q09",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Atlas has a storage quota of 80 GB.",
+    "event": {
+      "version": "v1"
+    }
+  },
+  {
+    "id": "q10",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Atlas has a storage quota of 80 GB.",
+    "event": null
+  },
+  {
+    "id": "q11",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Atlas has a storage quota of 65 GB.",
+    "event": {
+      "user": "alice"
+    }
+  },
+  {
+    "id": "q12",
+    "query": "What is the storage quota for Atlas?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Atlas",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Atlas has a storage quota of 65 GB.",
+    "event": null
+  },
+  {
+    "id": "q13",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "50",
+    "context": "Orion has a storage quota of 50 GB. Its backup quota is 8 GB.",
+    "event": null
+  },
+  {
+    "id": "q14",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "50",
+    "context": "Orion has a storage quota of 50 GB. Its backup quota is 8 GB.",
+    "event": null
+  },
+  {
+    "id": "q15",
+    "query": "What storage quota does Orion have?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "50",
+    "context": "Orion has a storage quota of 50 GB. Its backup quota is 8 GB.",
+    "event": null
+  },
+  {
+    "id": "q16",
+    "query": "What is the backup quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "backup",
+    "expected": "8",
+    "context": "Orion has a storage quota of 50 GB. Its backup quota is 8 GB.",
+    "event": null
+  },
+  {
+    "id": "q17",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-02-01"
+    },
+    "intent": "storage",
+    "expected": "90",
+    "context": "Orion has a storage quota of 90 GB.",
+    "event": null
+  },
+  {
+    "id": "q18",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read",
+        "admin"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "120",
+    "context": "Orion has an administrator storage quota of 120 GB.",
+    "event": null
+  },
+  {
+    "id": "q19",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "bob",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "25",
+    "context": "Orion has a storage quota of 25 GB for Bob.",
+    "event": null
+  },
+  {
+    "id": "q20",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v2",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "95",
+    "context": "Orion has a storage quota of 95 GB.",
+    "event": null
+  },
+  {
+    "id": "q21",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Orion has a storage quota of 80 GB.",
+    "event": {
+      "version": "v1"
+    }
+  },
+  {
+    "id": "q22",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Orion has a storage quota of 80 GB.",
+    "event": null
+  },
+  {
+    "id": "q23",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Orion has a storage quota of 65 GB.",
+    "event": {
+      "user": "alice"
+    }
+  },
+  {
+    "id": "q24",
+    "query": "What is the storage quota for Orion?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Orion",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Orion has a storage quota of 65 GB.",
+    "event": null
+  },
+  {
+    "id": "q25",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "60",
+    "context": "Vega has a storage quota of 60 GB. Its backup quota is 9 GB.",
+    "event": null
+  },
+  {
+    "id": "q26",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "60",
+    "context": "Vega has a storage quota of 60 GB. Its backup quota is 9 GB.",
+    "event": null
+  },
+  {
+    "id": "q27",
+    "query": "What storage quota does Vega have?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "60",
+    "context": "Vega has a storage quota of 60 GB. Its backup quota is 9 GB.",
+    "event": null
+  },
+  {
+    "id": "q28",
+    "query": "What is the backup quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "backup",
+    "expected": "9",
+    "context": "Vega has a storage quota of 60 GB. Its backup quota is 9 GB.",
+    "event": null
+  },
+  {
+    "id": "q29",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-02-01"
+    },
+    "intent": "storage",
+    "expected": "90",
+    "context": "Vega has a storage quota of 90 GB.",
+    "event": null
+  },
+  {
+    "id": "q30",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read",
+        "admin"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "120",
+    "context": "Vega has an administrator storage quota of 120 GB.",
+    "event": null
+  },
+  {
+    "id": "q31",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "bob",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "25",
+    "context": "Vega has a storage quota of 25 GB for Bob.",
+    "event": null
+  },
+  {
+    "id": "q32",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v2",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "95",
+    "context": "Vega has a storage quota of 95 GB.",
+    "event": null
+  },
+  {
+    "id": "q33",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Vega has a storage quota of 80 GB.",
+    "event": {
+      "version": "v1"
+    }
+  },
+  {
+    "id": "q34",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Vega has a storage quota of 80 GB.",
+    "event": null
+  },
+  {
+    "id": "q35",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Vega has a storage quota of 65 GB.",
+    "event": {
+      "user": "alice"
+    }
+  },
+  {
+    "id": "q36",
+    "query": "What is the storage quota for Vega?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Vega",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Vega has a storage quota of 65 GB.",
+    "event": null
+  },
+  {
+    "id": "q37",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "70",
+    "context": "Lyra has a storage quota of 70 GB. Its backup quota is 10 GB.",
+    "event": null
+  },
+  {
+    "id": "q38",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "70",
+    "context": "Lyra has a storage quota of 70 GB. Its backup quota is 10 GB.",
+    "event": null
+  },
+  {
+    "id": "q39",
+    "query": "What storage quota does Lyra have?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "70",
+    "context": "Lyra has a storage quota of 70 GB. Its backup quota is 10 GB.",
+    "event": null
+  },
+  {
+    "id": "q40",
+    "query": "What is the backup quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "backup",
+    "expected": "10",
+    "context": "Lyra has a storage quota of 70 GB. Its backup quota is 10 GB.",
+    "event": null
+  },
+  {
+    "id": "q41",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-02-01"
+    },
+    "intent": "storage",
+    "expected": "90",
+    "context": "Lyra has a storage quota of 90 GB.",
+    "event": null
+  },
+  {
+    "id": "q42",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read",
+        "admin"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "120",
+    "context": "Lyra has an administrator storage quota of 120 GB.",
+    "event": null
+  },
+  {
+    "id": "q43",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "bob",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "25",
+    "context": "Lyra has a storage quota of 25 GB for Bob.",
+    "event": null
+  },
+  {
+    "id": "q44",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v2",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "95",
+    "context": "Lyra has a storage quota of 95 GB.",
+    "event": null
+  },
+  {
+    "id": "q45",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Lyra has a storage quota of 80 GB.",
+    "event": {
+      "version": "v1"
+    }
+  },
+  {
+    "id": "q46",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "80",
+    "context": "Lyra has a storage quota of 80 GB.",
+    "event": null
+  },
+  {
+    "id": "q47",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Lyra has a storage quota of 65 GB.",
+    "event": {
+      "user": "alice"
+    }
+  },
+  {
+    "id": "q48",
+    "query": "What is the storage quota for Lyra?",
+    "scope": {
+      "user": "alice",
+      "permissions": [
+        "read"
+      ],
+      "version": "v1",
+      "entity": "Lyra",
+      "date": "2026-01-01"
+    },
+    "intent": "storage",
+    "expected": "65",
+    "context": "Lyra has a storage quota of 65 GB.",
+    "event": null
+  }
+]
